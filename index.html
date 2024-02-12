@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dice Dash</title>
+  </head>
+  <body>
+    <button class="btn--info">Game Rules</button>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>Rules 🎲</h1>
+      <br />
+      <p class="info">
+        <b>Objective:</b> The goal of the game is to be the first player to
+        reach or exceed a total score of 100 points. <br /><br />
+        <b>Setup:</b> Each player begins with a total score of 0. Players take
+        turns rolling two dice. <br /><br />
+        <b>Gameplay:</b> Players roll two dice on their turn and add the numbers
+        together. <br />If a player rolls a double (excluding ones), they gain a
+        bonus of 5 points in addition to the sum of the numbers rolled. <br />
+        If a player rolls a one on either die, they lose their current score and
+        their turn ends. <br />
+        If a player rolls two ones, they lose their entire total score and their
+        turn ends. <br />
+        Players must decide whether to "hold" and keep their current score or
+        continue rolling to potentially increase their score. <br /><br /><b
+          >Hold Rule:</b
+        >
+        When a player chooses to "hold", their current score is added to their
+        total score, and it becomes the next player's turn. <br /><br />
+        <b>Winning the game: </b> The game concludes when one player reaches or
+        exceeds a total score of 100 points. The player with the highest score
+        at the end of a round is declared the winner.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice dice-1" />
+      <img src="dice-3.png" alt="Playing dice" class="dice dice-2" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
